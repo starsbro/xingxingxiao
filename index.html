@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal Website</title>
+</head>
+<body>
+    <h1>Welcome to XingxingXiao's Website!!</h1>
+    <p>后端 API 测试：<span id="api-response">加载中...</span></p>
+    <script>
+        fetch("https://your-render-api.onrender.com/api/hello")
+            .then(res => res.json())
+            .then(data => document.getElementById("api-response").innerText = data.message)
+            .catch(err => console.error("API 请求失败", err));
+    </script>
+</body>
+</html>
